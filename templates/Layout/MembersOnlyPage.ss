@@ -1,0 +1,1 @@
+<h1>Please implement this page in your themed folder</h1>
