@@ -1,5 +1,5 @@
 {
-	"name": "silverstripe/membermanagement",
+	"name": "sunnysideup/membermanagement",
 	"type": "silverstripe-module",
 	"description": "small task to cleanup users in Silverstripe websites",
 	"homepage": "http://www.silverstripe-webdevelopment.com",
