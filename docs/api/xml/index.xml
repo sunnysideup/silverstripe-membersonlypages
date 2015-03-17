@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<index xmlns="http://xml.phpdox.net/src" basedir="/var/www/_modules/membersonlypages/trunk">
+  <namespace name="">
+    <class name="MembersOnlyPage" src="code/MembersOnlyPage.php" xml="classes/MembersOnlyPage.xml"/>
+    <class name="MembersOnlyPage_Controller" src="code/MembersOnlyPage.php" xml="classes/MembersOnlyPage_Controller.xml"/>
+  </namespace>
+</index>

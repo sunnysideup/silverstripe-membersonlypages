@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<source xmlns="http://xml.phpdox.net/src">
+  <dir name="/var/www/_modules/membersonlypages/trunk">
+    <file name="_config.php" size="542" time="2015-03-14T10:23:23+13:00" unixtime="1426281803" sha1="e3f6d20a151dec4c0a5785cfd8fe94a508c5ab7e" xml="tokens/_config.php.xml"/>
+    <dir name="code">
+      <file name="MembersOnlyPage.php" size="2540" time="2015-03-14T10:23:23+13:00" unixtime="1426281803" sha1="643def050f1a9f989739641310d80ef5f59b854d" xml="tokens/code/MembersOnlyPage.php.xml"/>
+    </dir>
+  </dir>
+</source>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="MembersOnlyPage" namespace="" name="MembersOnlyPage" abstract="false" final="false" start="3" end="79">
+  <file path="/var/www/_modules/membersonlypages/trunk/docs/en/phpdox/../../../code" file="MembersOnlyPage.php" realpath="/var/www/_modules/membersonlypages/trunk/code/MembersOnlyPage.php" size="2540" time="2015-03-14T10:23:23+13:00" unixtime="1426281803" sha1="643def050f1a9f989739641310d80ef5f59b854d" relative="code/MembersOnlyPage.php"/>
+  <extends full="Page" namespace="" name="Page"/>
+  <member name="add_action" type="string" default="'Members Only Page'" visibility="public" line="5"/>
+  <member name="icon" type="string" default="'mysite/images/treeicons/MembersOnlyPage'" visibility="public" line="7"/>
+  <member name="default_parent" type="string" default="'MembersOnlyPage'" visibility="public" line="9"/>
+  <member name="allowed_children" type="array" visibility="public" line="11"/>
+  <member name="group_code" type="string" default="&quot;intranet-users&quot;" visibility="protected" line="13"/>
+  <method name="set_group_code" start="14" end="14" abstract="false" final="false" static="true" visibility="public">
+    <parameter name="v" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="get_group_code" start="15" end="15" abstract="false" final="false" static="true" visibility="public"/>
+  <member name="group_name" type="string" default="&quot;intranet users&quot;" visibility="protected" line="17"/>
+  <method name="set_group_name" start="18" end="18" abstract="false" final="false" static="true" visibility="public">
+    <parameter name="v" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="get_group_name" start="19" end="19" abstract="false" final="false" static="true" visibility="public"/>
+  <member name="permission_code" type="string" default="&quot;INTRANET_USERS&quot;" visibility="protected" line="21"/>
+  <method name="set_permission_code" start="22" end="22" abstract="false" final="false" static="true" visibility="public">
+    <parameter name="v" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="get_permission_code" start="23" end="23" abstract="false" final="false" static="true" visibility="public"/>
+  <member name="defaults" type="array" visibility="public" line="25"/>
+  <method name="getCMSFields" start="31" end="34" abstract="false" final="false" static="false" visibility="public"/>
+  <method name="canView" start="36" end="43" abstract="false" final="false" static="false" visibility="public"/>
+  <method name="getShowInMenus" start="45" end="47" abstract="false" final="false" static="false" visibility="public"/>
+  <method name="ShowInMenus" start="49" end="51" abstract="false" final="false" static="false" visibility="public"/>
+  <method name="getShowInSearch" start="53" end="55" abstract="false" final="false" static="false" visibility="public"/>
+  <method name="ShowInSearch" start="57" end="59" abstract="false" final="false" static="false" visibility="public"/>
+  <method name="requireDefaultRecords" start="61" end="77" abstract="false" final="false" static="false" visibility="public"/>
+</class>
