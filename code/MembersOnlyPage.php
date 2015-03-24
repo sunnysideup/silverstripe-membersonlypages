@@ -2,27 +2,27 @@
 
 class MembersOnlyPage extends Page {
 
-	static $add_action = 'Members Only Page';
+	private static $add_action = 'Members Only Page';
 
-	static $icon = 'mysite/images/treeicons/MembersOnlyPage';
+	private static $icon = 'mysite/images/treeicons/MembersOnlyPage';
 
-	static $default_parent = 'MembersOnlyPage';
+	private static $default_parent = 'MembersOnlyPage';
 
-	static $allowed_children = array("MembersOnlyPage");
+	private static $allowed_children = array("MembersOnlyPage");
 
-	protected static $group_code = "intranet-users";
+	private static $group_code = "intranet-users";
 		static function set_group_code($v) {self::$group_code = $v;}
 		static function get_group_code() {return self::$group_code;}
 
-	protected static $group_name = "intranet users";
+	private static $group_name = "intranet users";
 		static function set_group_name($v) {self::$group_name = $v;}
 		static function get_group_name() {return self::$group_name;}
 
-	protected static $permission_code = "INTRANET_USERS";
+	private static $permission_code = "INTRANET_USERS";
 		static function set_permission_code($v) {self::$permission_code = $v;}
 		static function get_permission_code() {return self::$permission_code;}
 
-	static $defaults = array(
+	private static $defaults = array(
 		"ProvideComments" => 1,
 		"ShowInSearch" => 0
 	);
@@ -33,9 +33,9 @@ class MembersOnlyPage extends Page {
 		return $fields;
 	}
 
-	public function canView() {
+	public function canView($member = null) {
 		if ($member = Member::currentUser()) {
-			if($member->isAdmin() || Permission::checkMember($member, self::$permission_code)) {
+			if($member->inGroup("ADMIN") || Permission::checkMember($member, self::$permission_code)) {
 				return true;
 			}
 		}
@@ -59,20 +59,29 @@ class MembersOnlyPage extends Page {
 	}
 
 	public function requireDefaultRecords() {
-		$bt = defined('DB::USE_ANSI_SQL') ? "\"" : "`";
 		parent::requireDefaultRecords();
-		if(!$intranetGroup = DataObject::get_one("Group", "Code = '".self::get_group_code()."'")) {
-			$group = new Group();
-			$group->Code = self::get_group_code();
-			$group->Title = self::get_group_name();
-			$group->write();
-
-			Permission::grant( $group->ID, self::get_permission_code());
-			DB::alteration_message(self::get_group_name().' group created',"created");
+		$intranetGroup = Group::get()->filter(array("Code" => $this->Config()->get("group_code")))->first();
+		if($intranetGroup && $intranetGroup->exists()) {
+			//do nothing
 		}
-		else if(DB::query("SELECT * FROM Permission WHERE {$bt}GroupID{$bt} = '".$intranetGroup->ID."' AND {$bt}Code{$bt} LIKE '".self::get_permission_code()."'")->numRecords() == 0 ) {
-			Permission::grant($intranetGroup->ID, self::get_permission_code());
-			DB::alteration_message(self::get_group_name().' permissions granted',"created");
+		else {
+			$intranetGroup = new Group();
+			DB::alteration_message($this->Config()->get("group_name").' group created',"created");
+		}
+		if($intranetGroup) {
+			$intranetGroup->Code = $this->Config()->get("group_code");
+			$intranetGroup->Title = $this->Config()->get("group_name");
+			$intranetGroup->write();
+			Permission::grant( $intranetGroup->ID, $this->Config()->get("permission_code"));		
+			if(DB::query("
+				SELECT *
+				FROM Permission
+				WHERE \"GroupID\" = '".$intranetGroup->ID."'
+					AND \"Code\" LIKE '".$this->Config()->get("permission_code")."'")->numRecords() == 0
+			) {
+				Permission::grant($intranetGroup->ID, $this->Config()->get("permission_code"));
+				DB::alteration_message($this->Config()->get("group_name").' permissions granted',"created");
+			}
 		}
 	}
 
@@ -82,7 +91,7 @@ class MembersOnlyPage_Controller extends Page_Controller {
 
 	public function init() {
 		parent::init();
-		Requirements::themedCSS("MembersOnlyPage");
+		Requirements::themedCSS("MembersOnlyPage", "membersonlypages");
 	}
 
 
