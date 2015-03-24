@@ -1,0 +1,13 @@
+################################
+# Members Only Pages
+################################
+
+
+MembersOnlyPage:
+  group_code: "intranet-users"
+  group_name: "intranet users"
+  permission_code: "INTRANET_USERS"
+
+
+################################
+################################
