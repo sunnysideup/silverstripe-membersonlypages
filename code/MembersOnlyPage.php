@@ -33,7 +33,7 @@ class MembersOnlyPage extends Page {
 		return $fields;
 	}
 
-	public function canView($member = null) {
+	function canView($member = null) {
 		if ($member = Member::currentUser()) {
 			if($member->inGroup("ADMIN") || Permission::checkMember($member, self::$permission_code)) {
 				return true;
