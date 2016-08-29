@@ -1,20 +1,24 @@
 {
-	"name": "sunnysideup/membersonlypages",
-	"type": "silverstripe-module",
-	"description": "This helps you create a section of Members Only pages, by adding a special usergroups.  This is ideal for setting up an intranet. That is, not just anyone can access the pages.  You have to be either an admin OR a member of the specified group.",
-	"homepage": "http://www.silverstripe-webdevelopment.com",
-	"keywords": ["members", "users", "groups", "intranet", "silverstripe"],
-	"license": "Sunny Side Up (BSD-3-Clause and CUSTOM)",
-	"authors":[
-		{
-			"name": "Nicolaas Francken",
-			"homepage": "https://github.com/sunnysideup",
-			"email" : "modules@sunnysideup.co.nz",
-			"role" : "lead developer"
-		}
-	],
-	"require":{
-		"silverstripe/framework": "~3.1",
-		"silverstripe/cms": "~3.1"
-	}
+    "name": "sunnysideup/membersonlypages",
+    "type": "silverstripe-module",
+    "description": "This helps you create a section of Members Only pages, by adding a special usergroups.  This is ideal for setting up an intranet. That is, not just anyone can access the pages.  You have to be either an admin OR a member of the specified group.",
+    "keywords": [
+        "members",
+        "users",
+        "groups",
+        "intranet",
+        "silverstripe"
+    ],
+    "license": "Sunny Side Up (BSD-3-Clause and CUSTOM)",
+    "authors": [
+        {
+            "name": "Nicolaas Francken",
+            "email": "modules@sunnysideup.co.nz",
+            "role": "lead developer"
+        }
+    ],
+    "require": {
+        "silverstripe/framework": "~3.1",
+        "silverstripe/cms": "~3.1"
+    }
 }
