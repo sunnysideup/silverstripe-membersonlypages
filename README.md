@@ -1,27 +1,72 @@
-Members Only Pages
-================================================================================
+# Silverstripe membersonlypages module
+[![Build Status](https://travis-ci.org/sunnysideup/silverstripe-membersonlypages.svg?branch=master)](https://travis-ci.org/sunnysideup/silverstripe-membersonlypages)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/sunnysideup/silverstripe-membersonlypages/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/sunnysideup/silverstripe-membersonlypages/?branch=master)
+[![codecov.io](https://codecov.io/github/sunnysideup/silverstripe-membersonlypages/coverage.svg?branch=master)](https://codecov.io/github/sunnysideup/silverstripe-membersonlypages?branch=master)
+![helpfulrobot](https://helpfulrobot.io/sunnysideup/membersonlypages/badge)
 
-Developer
------------------------------------------------
-Nicolaas Francken [at] sunnysideup.co.nz
+[![Latest Stable Version](https://poser.pugx.org/sunnysideup/membersonlypages/version)](https://packagist.org/packages/sunnysideup/membersonlypages)
+[![License](https://poser.pugx.org/sunnysideup/membersonlypages/license)](https://packagist.org/packages/sunnysideup/membersonlypages)
+[![Monthly Downloads](https://poser.pugx.org/sunnysideup/membersonlypages/d/monthly)](https://packagist.org/packages/sunnysideup/membersonlypages)
 
-Requirements
------------------------------------------------
-SilverStripe 2.3
 
-Documentation
------------------------------------------------
-This helps you create a section of "Members Only"
-pages, by adding a special usergroups.  This is
-ideal for setting up an intranet.
-That is, not just anyone can access the pages.
-You have to be either an admin OR a member of the
-specified group.
+## Documentation
 
-Installation Instructions
------------------------------------------------
-1. Find out how to add modules to SS and add module as per usual.
-2. Review configs and add entries to mysite/_config/config.yml
-(or similar) as necessary.
-In the _config/ folder of this module
-you can usually find some examples of config options (if any).
+
+
+ * [Developer Docs](docs/en/INDEX.md)
+ * [User Guide](docs/en/userguide.md)
+ * [API](http://ssmods.com/apis/membersonlypages/docs/en/api/)
+
+## Requirements
+
+
+
+see [composer.json](composer.json) for details
+
+### Suggested Modules
+
+
+
+see [composer.json](composer.json) for details
+
+
+## Installation
+
+
+```
+composer require sunnysideup/membersonlypages
+```
+
+### Configuration
+
+
+
+In the `_config` folder you will find the `membersonlypages.yml.example`
+file that shows options for the configuration of this module.
+
+We recommend that you:
+
+  1. copy these `membersonlypages.yml.example` files into your
+`mysite/_config` folder
+  2. remove the .example extension
+  3. delete the lines you not care about, and
+  4. adjust the configurations that you would like to use.
+
+
+## Contributing
+
+
+
+We welcome any contributions. See [CONTRIBUTING.md](CONTRIBUTING.md) for more details.
+
+## Paid assistance
+
+
+
+You can pay us to create an improved / adapted version of this module for your own projects.  Please contact us if you like to find out more: [www.sunnysideup.co.nz](http://www.sunnysideup.co.nz)
+
+## Author
+
+
+
+Sunny Side Up Ltd.
