@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<class xmlns="http://xml.phpdox.net/src" full="MembersOnlyPage_Controller" namespace="" name="MembersOnlyPage_Controller" abstract="false" final="false" start="81" end="89">
-  <file path="/var/www/_modules/membersonlypages/trunk/docs/en/phpdox/../../../code" file="MembersOnlyPage.php" realpath="/var/www/_modules/membersonlypages/trunk/code/MembersOnlyPage.php" size="2540" time="2015-03-14T10:23:23+13:00" unixtime="1426281803" sha1="643def050f1a9f989739641310d80ef5f59b854d" relative="code/MembersOnlyPage.php"/>
-  <extends full="Page_Controller" namespace="" name="Page_Controller"/>
-  <method name="init" start="83" end="86" abstract="false" final="false" static="false" visibility="public"/>
-</class>
